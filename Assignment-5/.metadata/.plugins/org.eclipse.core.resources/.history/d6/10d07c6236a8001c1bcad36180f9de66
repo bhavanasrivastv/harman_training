@@ -1,0 +1,34 @@
+package day4;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+
+class CalculatorTest2 {
+	
+	private Calculator divideByZero;
+
+	@BeforeEach
+	void setUp() throws Exception {
+		divideByZero = new Calculator();
+		System.out.println("Running before each testcase");
+	}
+	
+	@Test
+void divide_two_number_test_with_exceptions() {
+		
+		Assertions.assertThrows(ArithmeticException.class,()->divideByZero.divide(8,0));
+	}
+
+
+	@AfterEach
+	void tearDown() throws Exception {
+		divideByZero = null;
+		System.out.println("Running After Each Test Case");
+	}
+
+	
+}
