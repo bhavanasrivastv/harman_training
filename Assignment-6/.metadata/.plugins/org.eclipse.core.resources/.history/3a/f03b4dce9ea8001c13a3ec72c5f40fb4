@@ -1,0 +1,4 @@
+jdbc.url=jdbc:mysql://localhost:3306/harman_book
+jdbc.driverName=com.mysql.cj.jdbc.Driver
+jdbc.username=root
+jdbc.password=bhavana

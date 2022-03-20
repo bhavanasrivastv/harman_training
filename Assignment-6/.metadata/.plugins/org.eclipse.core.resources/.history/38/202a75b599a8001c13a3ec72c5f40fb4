@@ -1,0 +1,5 @@
+package com.bookapp.model.exception;
+
+public class BookStoreNotFoundException {
+
+}

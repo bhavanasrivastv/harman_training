@@ -1,0 +1,22 @@
+package com.bookapp.web.controller;
+
+import java.util.*;
+
+import com.bookapp.model.dao.BookStore;
+import com.bookapp.model.service.BookService;
+import com.bookapp.model.service.BookServiceImpl;
+
+public class DemoBookApp {
+	public static void main(String[] args) {
+		
+		BookService bookService = new BookServiceImpl();
+		list<BookStore>bookstores = bookService.getAll();
+		
+		for(BookStore bookstore: bookstores)
+			System.out.println(bookstore);
+		
+		BookStore bookstore = new BookStore("xyz","lmno",700);
+		
+		bookService.updateBook(4,bookstore);
+	}
+}
