@@ -68,7 +68,7 @@ public class BookStoreDaoImpl implements BookStoreDao{
 		
 		java.sql.PreparedStatement stmt = null;
 		try {
-			stmt = connection.prepareStatement("update books set book_price = ? where id = ?");
+			stmt = connection.prepareStatement("update books set book_price = ? where book_id = ?");
 			stmt.setInt(1, bookstore.getBook_price());
 			stmt.setInt(2, book_id);
 			stmt.executeUpdate();

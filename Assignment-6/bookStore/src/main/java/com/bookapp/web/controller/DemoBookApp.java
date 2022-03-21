@@ -15,7 +15,7 @@ public class DemoBookApp {
 		for(BookStore bookstore: bookstores)
 			System.out.println(bookstore);
 		
-		BookStore bookstore = new BookStore("xyz","lmno",700);
+		BookStore bookstore = new BookStore();
 		
 		bookService.updateBookStore(4,bookstore);
 	}
